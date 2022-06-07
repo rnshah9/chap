@@ -1,0 +1,5 @@
+project: chap
+target: chap
+
+cmds:
+  - cmd: /repo/build/chap @@
