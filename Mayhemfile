@@ -2,4 +2,4 @@ project: chap
 target: chap
 
 cmds:
-  - cmd: /repo/build/chap @@
+  - cmd: /install/bin/chap @@
