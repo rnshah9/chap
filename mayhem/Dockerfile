@@ -8,8 +8,8 @@ WORKDIR /repo/build
 RUN cmake .. -DCMAKE_INSTALL_PREFIX=/install
 RUN make -j8
 RUN make install
-RUN clang++ /repo/mayhem/fuzz.cpp -fsanitize=fuzzer,address -I /repo/src/CPlusPlus -o /fuzz
+RUN clang++ /repo/mayhem/fuzz_Unmangled.cpp -fsanitize=fuzzer,address -I /repo/src/CPlusPlus -o /fuzz
 
 FROM ubuntu:22.04 as package
 COPY --from=builder /install /install
-COPY --from=builder /fuzz /fuzz
+COPY --from=builder /fuzz /fuzz_Unmangled
