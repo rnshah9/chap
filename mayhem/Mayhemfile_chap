@@ -1,5 +1,4 @@
 project: chap
 target: chap
-
 cmds:
   - cmd: /install/bin/chap @@

@@ -1,0 +1,7 @@
+project: chap
+target: unmangled
+testsuite:
+  - file://mayhem/corpus
+cmds:
+  - cmd: /fuzz_Unmangled
+    libfuzzer: true
